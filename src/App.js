@@ -171,24 +171,28 @@ function App() {
                 description:
                   "Built a full-stack attendance management system with React Native. Integrated face comparison using AI/ML libraries to verify user identity during check-ins. Added auto login/logout, leave management, task tracking, and location tracking for employees visiting client sites.",
                 tags: ["React Native", "TensorFlow", "Face-API", "Firebase", "Google API", "Headless JS"],
+                link: "https://employees.live/",
               },
               {
                 title: "Finance Management App",
                 description:
                   "Developed a budget-focused finance management system. Features include bill payment, tax payment, invoicing, employee salary management, and a dashboard displaying due bills, invoices, and remaining amounts.",
                 tags: ["React Native", "MERN Stack", "MongoDB", "Express.js", "React.js", "Node.js"],
+                link: null,
               },
               {
                 title: "Project Management Web App",
                 description:
                   "Built a MERN stack application for employee work tracking, project progress, and task management. Improved team collaboration and reduced project turnaround time by 40%.",
                 tags: ["MERN Stack", "MongoDB", "Express.js", "React.js", "Node.js", "Google API"],
+                link: "https://assignments.operate.live/",
               },
               {
                 title: "Job-Seeking Android App",
                 description:
                   "Developed an Android job-seeking platform with features like user connections, chatting, job applications, feed uploads, notifications, and direct recruiter interactions.",
                 tags: ["React Native", "Firebase", "Socket.IO", "Google API", "MERN Stack"],
+                link: "https://bizibees.in/download_page.html",
               },
             ].map((project, index) => (
               <motion.div
@@ -210,6 +214,12 @@ function App() {
                       </span>
                     ))}
                   </div>
+                 {project.link&& <button
+                    className="bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded-md transition duration-300"
+                    onClick={() => window.open(project.link, '_blank')} // Opens the link in a new tab
+                  >
+                    See Project
+                  </button>}
                 </div>
               </motion.div>
             ))}
@@ -219,74 +229,74 @@ function App() {
 
       {/* Contact Section */}
       <section id="contact" className="contact py-20 px-4">
-      <div className="container mx-auto max-w-3xl text-center">
-        <motion.h2
-          className="text-4xl font-bold mb-8"
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false }}
-          transition={{ duration: 0.6 }}
-        >
-          Let's Work Together!
-        </motion.h2>
-        <motion.p
-          className="text-xl mb-12"
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          Feel free to reach out to me for collaborations or job opportunities.
-        </motion.p>
-        <div className="contact-buttons flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6">
-          {/* Email Button */}
-          <motion.a
-            href="mailto:moinkhan29727@gmail.com"
-            className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 inline-block"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+        <div className="container mx-auto max-w-3xl text-center">
+          <motion.h2
+            className="text-4xl font-bold mb-8"
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.6 }}
           >
-            Email Me
-          </motion.a>
-
-          {/* LinkedIn Button */}
-          <motion.a
-            href="https://www.linkedin.com/in/moin-khan-56a339203?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 inline-block"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            Let's Work Together!
+          </motion.h2>
+          <motion.p
+            className="text-xl mb-12"
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.6, delay: 0.2 }}
           >
-            LinkedIn
-          </motion.a>
-
-          {/* Call Button */}
-          {isMobileDevice() ? (
+            Feel free to reach out to me for collaborations or job opportunities.
+          </motion.p>
+          <div className="contact-buttons flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6">
+            {/* Email Button */}
             <motion.a
-              href="tel:+919945126529" // Replace with your actual phone number
-              className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 inline-block"
+              href="mailto:moinkhan29727@gmail.com"
+              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 inline-block"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
             >
-              Call Me
+              Email Me
             </motion.a>
-          ) : (
-            <motion.div
-              className="bg-green-600 text-white font-bold py-3 px-8 rounded-full text-lg cursor-default"
+
+            {/* LinkedIn Button */}
+            <motion.a
+              href="https://www.linkedin.com/in/moin-khan-56a339203?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 inline-block"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
             >
-              +91 99451 26529
-            </motion.div>
-          )}
+              LinkedIn
+            </motion.a>
+
+            {/* Call Button */}
+            {isMobileDevice() ? (
+              <motion.a
+                href="tel:+919945126529" // Replace with your actual phone number
+                className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 inline-block"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              >
+                Call Me
+              </motion.a>
+            ) : (
+              <motion.div
+                className="bg-green-600 text-white font-bold py-3 px-8 rounded-full text-lg cursor-default"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              >
+                +91 99451 26529
+              </motion.div>
+            )}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
 
       {/* Footer */}
