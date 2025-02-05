@@ -178,7 +178,7 @@ function App() {
                 description:
                   "Developed a budget-focused finance management system. Features include bill payment, tax payment, invoicing, employee salary management, and a dashboard displaying due bills, invoices, and remaining amounts.",
                 tags: ["React Native", "MERN Stack", "MongoDB", "Express.js", "React.js", "Node.js"],
-                link: null,
+                link: "http://bizibees.in/finol.apk",
               },
               {
                 title: "Project Management Web App",
@@ -214,7 +214,7 @@ function App() {
                       </span>
                     ))}
                   </div>
-                 {project.link&& <button
+                  {project.link && <button
                     className="bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded-md transition duration-300"
                     onClick={() => window.open(project.link, '_blank')} // Opens the link in a new tab
                   >
